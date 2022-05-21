@@ -30,6 +30,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-header-dark a {
+   color: #61dafb;
+}
 .App-header-white {
   background-color: #FFF;
   min-height: 100vh;
