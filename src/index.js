@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { SnapshotComponent } from './components/snapshotComponent/SnapshotComponent';
@@ -8,14 +8,14 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-   <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<App />}>
+   <Router>
+     <Routes>
+        <Route  exact path="/" element={<App />}>
         </Route>
         <Route path="snaphot" element={<SnapshotComponent />}>
         </Route>
       </Routes>
-   </BrowserRouter>
+   </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
