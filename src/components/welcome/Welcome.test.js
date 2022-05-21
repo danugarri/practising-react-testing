@@ -4,6 +4,9 @@ import { Welcome } from "./Welcome";
 import {BrowserRouter as Router} from 'react-router-dom';
 
 describe('The Welcome component', () => { 
+    beforeAll(() => {
+        console.log('Checking the user interactions with the button');
+    });
     test('should check if the text A (It is the white mode) is in the document without clicking the button', () => {
         // Arrange
         render(<Router><Welcome /></Router>);
@@ -38,3 +41,26 @@ describe('The Welcome component', () => {
 
     });
  });
+     test('should check if the text A and text B change each time the user clicks the button', () => {
+        // Arrange
+        render(<Router><Welcome /></Router>);
+        // ACT
+        const buttonElement= screen.getByRole('button', {name: 'switch'});
+       
+        for(let i=0; i<10;i++) {
+            // Assetions
+            // initial value
+            let textA= screen.getByText('It is the white mode',{exact:false});
+            expect(textA).toBeInTheDocument();
+            // launch click event
+            userEvent.click(buttonElement);
+            // Assetions
+            let textB= screen.getByText('It is the dark mode',{exact:false});
+            expect(textB).toBeInTheDocument();
+              // launch click event
+            userEvent.click(buttonElement);
+            // Assetions
+            textA= screen.getByText('It is the white mode',{exact:false});
+            expect(textA).toBeInTheDocument();
+        }
+    });
