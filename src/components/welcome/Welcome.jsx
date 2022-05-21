@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Context } from '../context/Context';
-import './Welcome.css';
+// import './Welcome.css';
 
 export const Welcome = () => {
     

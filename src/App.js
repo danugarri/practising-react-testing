@@ -10,14 +10,14 @@ import { Home } from './components/home/Home';
 function App() {
   const [nightMode, setNightMode]= useState(false);
   const handleNightMode= () => setNightMode(!nightMode);
-  const customTheme= nightMode ? 'white' : 'dark';
+  const customTheme= nightMode ? 'App-header-white' : 'App-header-dark';
 
   return (
     <Context.Provider value={{nightMode,handleNightMode}}>
       <Router>
           <div className={customTheme}> 
         <Routes>
-            <Route exact path="/" element={<Home />}>
+            <Route exact path="/" element={<Home customTheme= {customTheme} />}>
             </Route>
             <Route path="snaphot" element={<SnapshotComponent />}>
             </Route>

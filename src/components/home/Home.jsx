@@ -4,10 +4,11 @@ import '../../App.css';
 import { Greeting } from '../greeting/Greeting';
 import { NavLink } from 'react-router-dom';
 
-export const Home = () => {
+export const Home = (props) => {
+    const {customTheme} = props;
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={customTheme}>
         <img src={logo} className="App-logo" alt="logo" />
         <a
           className="App-link"
