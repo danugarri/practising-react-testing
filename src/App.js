@@ -1,28 +1,28 @@
-import { NavLink } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
-import { Greeting } from './components/greeting/Greeting';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { Context } from './components/context/Context';
+import { AsyncComponent } from './components/asynComponent/AsyncComponent';
+import { SnapshotComponent } from './components/snapshotComponent/SnapshotComponent';
+import { Welcome } from './components/welcome/Welcome';
+import { Home } from './components/home/Home';
+
 
 function App() {
   return (
-    
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Greeting />
-      <NavLink to = 'snaphot'>Snapshot component</NavLink><hr />
-      <NavLink to = 'welcome'>Customise your theme</NavLink><hr />
-      <NavLink to = 'async'>Async component</NavLink>
-    </div>
+    // <Context.Provider value={''}>
+    <Router>
+      <Routes>
+          <Route exact path="/" element={<Home />}>
+         </Route>
+         <Route path="snaphot" element={<SnapshotComponent />}>
+         </Route>
+         <Route path="welcome" element={<Welcome />}>
+         </Route>
+         <Route path="async" element={<AsyncComponent />}>
+         </Route>
+       </Routes>
+    </Router>
+    // </Context.Provider>
+  
   );
 }
 
