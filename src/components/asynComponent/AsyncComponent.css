@@ -1,0 +1,13 @@
+.home-button {
+    background-color: rgb(166, 166, 199);
+    color: #FFF;
+    position: fixed;
+    top:30px;
+    right: 30px;;
+}
+.home-button a:active{
+    color: red;
+}
+.home-button:hover{
+   background-color: rgb(174, 228, 134);
+}

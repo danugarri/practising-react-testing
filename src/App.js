@@ -20,7 +20,8 @@ function App() {
       </header>
       <Greeting />
       <NavLink to = 'snaphot'>Snapshot component</NavLink><hr />
-      <NavLink to = 'welcome'>Customise your theme</NavLink>
+      <NavLink to = 'welcome'>Customise your theme</NavLink><hr />
+      <NavLink to = 'async'>Async component</NavLink>
     </div>
   );
 }

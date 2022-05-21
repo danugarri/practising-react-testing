@@ -6,6 +6,7 @@ import { SnapshotComponent } from './components/snapshotComponent/SnapshotCompon
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Welcome } from './components/welcome/Welcome';
+import { AsyncComponent } from './components/asynComponent/AsyncComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,8 @@ root.render(
         <Route path="snaphot" element={<SnapshotComponent />}>
         </Route>
         <Route path="welcome" element={<Welcome />}>
+        </Route>
+        <Route path="async" element={<AsyncComponent />}>
         </Route>
       </Routes>
    </Router>
