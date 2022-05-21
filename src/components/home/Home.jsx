@@ -22,7 +22,7 @@ export const Home = (props) => {
       <Greeting />
       <NavLink to = 'snaphot'>Snapshot component</NavLink><hr />
       <NavLink to = 'welcome'>Customise your theme</NavLink><hr />
-      <NavLink to = 'async'>Async component</NavLink>
+      <NavLink to = 'async'>Async component</NavLink><hr />
     </div>
   )
 }

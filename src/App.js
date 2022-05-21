@@ -10,7 +10,7 @@ import { Home } from './components/home/Home';
 function App() {
   const [nightMode, setNightMode]= useState(false);
   const handleNightMode= () => setNightMode(!nightMode);
-  const customTheme= nightMode ? 'App-header-white' : 'App-header-dark';
+  const customTheme= nightMode ? 'App-header-dark' : 'App-header-white';
 
   return (
     <Context.Provider value={{nightMode,handleNightMode}}>
