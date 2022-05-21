@@ -19,7 +19,8 @@ function App() {
         </a>
       </header>
       <Greeting />
-      <NavLink to = 'snaphot'>Snapshot component</NavLink>
+      <NavLink to = 'snaphot'>Snapshot component</NavLink><hr />
+      <NavLink to = 'welcome'>Customise your theme</NavLink>
     </div>
   );
 }

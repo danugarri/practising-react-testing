@@ -5,6 +5,7 @@ import './index.css';
 import { SnapshotComponent } from './components/snapshotComponent/SnapshotComponent';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Welcome } from './components/welcome/Welcome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,8 @@ root.render(
         <Route  exact path="/" element={<App />}>
         </Route>
         <Route path="snaphot" element={<SnapshotComponent />}>
+        </Route>
+        <Route path="welcome" element={<Welcome />}>
         </Route>
       </Routes>
    </Router>
