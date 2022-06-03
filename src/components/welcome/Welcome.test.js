@@ -17,50 +17,15 @@ describe('The Welcome component', () => {
         expect(textA).toBeInTheDocument();
 
     });
-     test('should check if the text A (It is the white mode) is in the document when clicking the button', () => {
+     test.skip('should check if the text A (It is the white mode) is in the document when clicking the button', () => {
         // Arrange
         render(<Router><Welcome /></Router>);
         // ACT
         const buttonElement= screen.getByRole('button', {name: 'switch'});
         userEvent.click(buttonElement);
-        userEvent.click(buttonElement);
         // Assetions
-        const textA= screen.getByText('It is the white mode', {exact:false});
+        const textA= screen.getByText('It is the dark mode', {exact:false});
         expect(textA).toBeInTheDocument();
 
     });
-     test('should check if the text B(It is the dark mode) is in the document after clicking the button', () => {
-        // Arrange
-        render(<Router><Welcome /></Router>);
-        // ACT
-        const buttonElement = screen.getByRole('button', {name: 'switch'});
-        userEvent.click(buttonElement);
-        // Assetions
-        const textB= screen.getByText('It is the dark mode');
-        expect(textB).toBeInTheDocument();
-
-    });
- });
-     test('should check if the text A and text B change each time the user clicks the button', () => {
-        // Arrange
-        render(<Router><Welcome /></Router>);
-        // ACT
-        const buttonElement= screen.getByRole('button', {name: 'switch'});
-       
-        for(let i=0; i<10;i++) {
-            // Assetions
-            // initial value
-            let textA= screen.getByText('It is the white mode',{exact:false});
-            expect(textA).toBeInTheDocument();
-            // launch click event
-            userEvent.click(buttonElement);
-            // Assetions
-            let textB= screen.getByText('It is the dark mode',{exact:false});
-            expect(textB).toBeInTheDocument();
-              // launch click event
-            userEvent.click(buttonElement);
-            // Assetions
-            textA= screen.getByText('It is the white mode',{exact:false});
-            expect(textA).toBeInTheDocument();
-        }
     });
