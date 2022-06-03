@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+button{
+  cursor:pointer;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -32,6 +35,7 @@
 }
 .App-header-dark a {
    color: #61dafb;
+   text-decoration: none;
 }
 .App-header-white {
   background-color: #FFF;

@@ -11,3 +11,7 @@
 .home-button:hover{
    background-color: rgb(174, 228, 134);
 }
+.home-button a:hover{
+   color:#000;
+}
+
