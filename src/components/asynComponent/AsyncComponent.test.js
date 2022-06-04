@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom'
 import { BrowserRouter } from 'react-router-dom';
-import { AsyncComponent } from './AsyncComponent';
+import AsyncComponent from './AsyncComponent';
 describe('The AsyncComponent', () => { 
     it('should render the data if the request succeeds', async () => {
         // Arrange
