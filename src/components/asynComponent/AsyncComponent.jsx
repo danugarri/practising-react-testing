@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import './AsyncComponent.css';
 
-export const AsyncComponent = () => {
+const AsyncComponent = () => {
     const [posts,setPosts] = useState([]);
 
     useEffect(() => {
@@ -25,3 +25,6 @@ export const AsyncComponent = () => {
     </div>
   )
 }
+
+export default AsyncComponent;
+// we are exporting this one as default to be able to use Lazy Loading
