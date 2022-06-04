@@ -16,16 +16,16 @@ function App() {
     <Context.Provider value={{nightMode,handleNightMode}}>
       <Router>
           <div className={customTheme}> 
-        <Routes>
-            <Route exact path="/" element={<Home customTheme= {customTheme} />}>
-            </Route>
-            <Route path="snaphot" element={<SnapshotComponent />}>
-            </Route>
-            <Route path="welcome" element={<Welcome />}>
-            </Route>
-            <Route path="async" element={<AsyncComponent />}>
-            </Route>
-        </Routes>
+          <Routes>
+              <Route exact path="/" element={<Home customTheme= {customTheme} />}>
+              </Route>
+              <Route path="snapshot" element={<SnapshotComponent />}>
+              </Route>
+              <Route path="welcome" element={<Welcome />}>
+              </Route>
+              <Route path="async" element={<AsyncComponent />}>
+              </Route>
+          </Routes>
           </div>
       </Router>
    </Context.Provider>

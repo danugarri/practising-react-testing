@@ -20,7 +20,7 @@ export const Home = (props) => {
         </a>
       </header>
       <Greeting />
-      <NavLink to = 'snaphot'>Snapshot component</NavLink><hr />
+      <NavLink to = 'snapshot'>Snapshot component</NavLink><hr />
       <NavLink to = 'welcome'>Customise your theme</NavLink><hr />
       <NavLink to = 'async'>Async component</NavLink><hr />
     </div>

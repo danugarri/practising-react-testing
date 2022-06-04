@@ -12,7 +12,7 @@ describe('The Welcome component', () => {
         render(<Router><Welcome /></Router>);
         // ACT
 
-        // Assetions
+        // Assertions
         const textA= screen.getByText('It is the white mode');
         expect(textA).toBeInTheDocument();
 
@@ -23,7 +23,7 @@ describe('The Welcome component', () => {
         // ACT
         const buttonElement= screen.getByRole('button', {name: 'switch'});
         userEvent.click(buttonElement);
-        // Assetions
+        // Assertions
         const textA= screen.getByText('It is the dark mode', {exact:false});
         expect(textA).toBeInTheDocument();
 

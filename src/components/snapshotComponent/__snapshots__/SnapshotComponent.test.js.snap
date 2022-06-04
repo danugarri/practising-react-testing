@@ -3,11 +3,14 @@
 exports[`The SnapShotComponent renders correctly 1`] = `
 Array [
   <h1>
-    This a component which we do not want to be modified
+    This is a component we do not want to be modified
   </h1>,
   <span>
     According to the previus statement  we will create a SNAPSHOT TEST to avoid changes
   </span>,
+  <p>
+    Please look at the code to find it
+  </p>,
   <hr />,
   <a
     aria-current="page"
